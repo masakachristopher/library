@@ -38,7 +38,7 @@ session_start();
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="indexpage.php?option=about"><span class="glyphicon glyphicon-user"></span> About Us</a>
+            <a class="nav-link" href="indexpage.php?option=about"><span class="glyphicon glyphicon-user"></span> About</a>
           </li>
 	  <li class="nav-item">
             <a class="nav-link" href="indexpage.php?option=contact"><span class="glyphicon glyphicon-phone"></span>Contact</a>
@@ -61,9 +61,9 @@ session_start();
     <div class="masthead-content">
 
       <div class="container">
-        <h1 class="masthead-heading mb-0">welcome to this platform</h1>
+        <h1 class="masthead-heading mb-0">welcome to this notice board platform</h1>
         <h2 class="masthead-subheading mb-0">home of every update you need</h2>
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">LEARN MORE</a>
+        <a href="moreinfo.php" class="btn btn-primary btn-xl rounded-pill mt-5">Get More</a>
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>
@@ -166,7 +166,7 @@ session_start();
   <!-- Footer -->
   <footer class="py-5 bg-black">
     <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; www.noticeboardsystem.com 2019    <span>  </span>The Team: Shaban Masaka Mgini</p>
+      <p class="m-0 text-center text-white small">Copyright &copy; www.noticeboardsystem.com 2019    <span style="width:5px;">  </span>The Team: Shaban Masaka Mgini</p>
     </div>
     <!-- /.container -->
   </footer>

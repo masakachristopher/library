@@ -17,8 +17,8 @@ else
 //dob
 $dob=$yy."-".$mm."-".$dd;
 
-//hobbies
-$hob=implode(",",$hob);
+// year of study(yos)
+
 
 //image
 $imageName=$_FILES['img']['name'];
@@ -28,7 +28,7 @@ $imageName=$_FILES['img']['name'];
 $pass=md5($p);
 
 
-$query="insert into user values('','$n','$e','$pass','$mob','$gen','','$imageName','$dob',now())";
+$query="insert into user values('','$n','$e','$pass','$mob','$gen','$_POST[yos]','$imageName','$dob','$_POST[regid]')";
 mysqli_query($conn,$query);
 
 //upload image
@@ -42,19 +42,15 @@ $err="<font color='blue'>Registration successfull !!</font>";
 }
 }
 
-
-
-
 ?>
-<center>
-<h2>Register Here</h2>
+
+ 
+  <h2>Register Here</h2>
 		<form width="50px" method="post" enctype="multipart/form-data">
 		
-	
-		<?php echo @$err;?>
-	
-				
-				
+			<p><?php echo @$err;?></p>
+						
+						
 					 Enter your name: <br>
 					<input type="text"  class="form-control" name="n" required>
 					<br>
@@ -69,7 +65,7 @@ $err="<font color='blue'>Registration successfull !!</font>";
 				
 					<br>
 					Enter your mobile: <br>
-					<input  class="form-control" type="number" value="+255" name="mob" required>
+					<input  class="form-control" type="tel" value="+255" name="mob" required>
 				
 				
 					<br>
@@ -77,7 +73,15 @@ $err="<font color='blue'>Registration successfull !!</font>";
 					Male<input type="radio" name="gen" value="m" required>
 					Female<input type="radio" name="gen" value="f">	
 					<br>
-				
+
+					<br>
+					Year of study:
+					<input type="number" min="1" max="5" value="1" name="yos">
+					<br>
+					<br>
+					Registration number:
+					<input type="" name="regid" value="0000-00-00000">
+					<br>
 					<br>
 								
 					Upload  your Image:
@@ -115,19 +119,14 @@ $err="<font color='blue'>Registration successfull !!</font>";
 					for($i=2019;$i>=1950;$i--)
 					{
 					echo "<option>".$i."</option>";
-					}					
-					?>
-					
+					}
+					?>    					
 					</select>
 					
 					<br>
 					<br>
-
-<input type="submit" class="btn btn-success" value="Save" name="save"/>
-<input type="reset" class="btn btn-success" value="Reset"/>
-				
 					
-			<center>
-		</form>
-	</body>
-</html>
+                   <input type="submit" class="btn btn-success" value="Save" name="save"/>
+                   <input type="reset" class="btn btn-danger" value="Reset"/>
+		
+</form>

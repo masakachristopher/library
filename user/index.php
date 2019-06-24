@@ -28,14 +28,16 @@ $users=mysqli_fetch_assoc($sql);
     <link href="../css/dashboard.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <!-- [if lt IE 9]> -->
+    <script src="../../assets/js/ie8-responsive-file-warning.js"></script>
+    <!-- <![endif] -->
     <script src="../js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+    <!-- [if lt IE 9]> -->
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <!-- <![endif] -->
   </head>
 
   <body>
@@ -49,7 +51,7 @@ $users=mysqli_fetch_assoc($sql);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Hello! Welocome, <?php echo $users['name'];?></a>
+          <a class="navbar-brand" href="#">Hello! Welcome, <?php echo $users['name'];?></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -91,8 +93,8 @@ $users=mysqli_fetch_assoc($sql);
 			
 			
 			<li><a href="index.php?page=update_password"><span class="glyphicon glyphicon-user"></span> Update Password</a></li>
-            <li><a href="index.php?page=update_profile"><span class="glyphicon glyphicon-user"></span> Update Profile</a></li>
-			 <li><a href="index.php?page=notification"><span class="glyphicon glyphicon-envelope"></span> Notification</a></li>
+            <li><a href="index.php?page=update_profile"><span class="glyphicon glyphicon-user"></span> Update Details</a></li>
+			 <li><a href="index.php?page=notification"><span class="glyphicon glyphicon-envelope"></span> Messages/ Announcement</a></li>
             
           </ul>
          
@@ -128,7 +130,19 @@ $users=mysqli_fetch_assoc($sql);
 		  }
 		  else
 		  {
-		  include('notification.php');
+        
+        // include('notification.php');
+        // include('simple-magazine/index.html');
+        include('newsfeed/index.php');
+        
+        
+        
+      
+      
+                            
+
+      
+      
 		  ?>
 		  <!-- container end-->
 		   

@@ -26,14 +26,14 @@ $sql=mysqli_query($conn,"select * from user where email='".$_SESSION['user']."'"
 $res=mysqli_fetch_assoc($sql);
 
 ?>
-<body  style="background-color:gold;">
-<h2 align="center">Profile Update</h2>
+<body  style="">
+<h2 align="center"><b>Profile Update</b></h2>
 
-		<form style="background-color:lightblue;" method="post">
-			<table class="table table-bordered">
-	<Tr>
-		<Td colspan="2"><?php echo @$err;?></Td>
-	</Tr>
+		<form style="" method="post">
+			<table class="table table-striped">
+	
+		<?php echo @$err;?>
+	
 				
 				<tr>
 					<td>Enter your name</td>
@@ -60,7 +60,7 @@ $res=mysqli_fetch_assoc($sql);
 
 				<tr>
 					<td>Year of study:</td>
-					<Td><input type="number" value="<?php echo $res['yos'];?>" name="yos"></Td>
+					<Td><input class="form-control" type="number" min="1" value="<?php echo $res['yos'];?>" name="yos"></Td>
 				</tr>
 				
 				

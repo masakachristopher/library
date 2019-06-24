@@ -4,7 +4,7 @@ extract($_POST);
 if(isset($update))
 {
 $img=$_FILES['f']['name'];
-echo $img; 
+// echo $img; 
 
 $query="update user set image='$img' where email='".$_SESSION['user']."'";
 mysqli_query($conn,$query);
@@ -25,7 +25,7 @@ $res=mysqli_fetch_assoc($sql);
 <h2 align="center">Update your image</h2>
 
 		<form method="post" enctype="multipart/form-data">
-			<table class="table table-bordered">
+			<table class="table table-striped ">
 	<Tr>
 		<Td colspan="2"><?php echo @$err;?></Td>
 	</Tr>

@@ -1,4 +1,5 @@
 <?php 
+
 $q=mysqli_query($conn,"select * from notice where user='".$_SESSION['user']."'");
 $rr=mysqli_num_rows($q);
 if(!$rr)
@@ -8,13 +9,13 @@ echo "<h2 style='color:red'>No any notice for You !!!</h2>";
 else
 {
 ?>
-<body  style="background-color:silver;"
-<h2>All Notifications</h2>
+<body  style="background-color:silver;">
+<h2>Important Notifications</h2>
 
-<table class="table table-bordered">
-	<Tr class="success">
+<table class="table">
+	<Tr class="danger">
 		<th>No</th>
-		<th>Subject</th>2
+		<th>Subject</th>
 		<th>Details</th>
 		<th>Date</th>
 		</Tr>
@@ -38,4 +39,6 @@ $i++;
 		
 </table>
 <?php }?>
+
+
 </body>

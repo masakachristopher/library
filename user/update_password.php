@@ -39,9 +39,9 @@ $err="<font color='red'>Wrong Old Password </font>";
 }
 
 ?>
-<body style="background-color:gold;">
-<h2 align="center">Update your password</h2>
-<form  style="background-color:lightblue;" method="post">
+<body style="">
+<h2 align="center"><b>Update your password</b></h2>
+<form  style="" method="post">
 	
 	<div class="row">
 		<div class="col-sm-4"></div>

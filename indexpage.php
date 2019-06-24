@@ -17,12 +17,16 @@ session_start();
   <!-- Bootstrap core CSS -->
   <link href="wonder/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+
   <!-- Custom fonts for this template -->
   <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
+  <!-- custom for indexpage -->
   <link href="wonder/css/one-page-wonder.min.css" rel="stylesheet">
+  
 
 </head>
 
@@ -35,12 +39,13 @@ session_start();
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
             <a class="nav-link" href="indexpage.php?option=about"><span class="glyphicon glyphicon-user"></span> About</a>
           </li>
-	  <li class="nav-item">
+	        <li class="nav-item">
             <a class="nav-link" href="indexpage.php?option=contact"><span class="glyphicon glyphicon-phone"></span>Contact</a>
           </li>
           <li class="nav-item">
@@ -49,6 +54,7 @@ session_start();
           <li class="nav-item">
             <a class="nav-link" href="indexpage.php?option=login"><span class="glyphicon glyphicon-login"></span>Log In</a>
           </li>
+          
         </ul>
       </div>
     </div>
@@ -63,7 +69,7 @@ session_start();
       <div class="container">
         <h1 class="masthead-heading mb-0">welcome to this notice board platform</h1>
         <h2 class="masthead-subheading mb-0">home of every update you need</h2>
-        <a href="moreinfo.php" class="btn btn-primary btn-xl rounded-pill mt-5">Get More</a>
+        <a href="indexpage.php?option=login" class="btn btn-primary btn-xl rounded-pill mt-5">Get More</a>
       </div>
     </div>
     <div class="bg-circle-1 bg-circle"></div>
@@ -114,7 +120,7 @@ session_start();
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/vote.png" alt="">
+            <img class="img-fluid" src="images/vote.png" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
@@ -132,7 +138,7 @@ session_start();
       <div class="row align-items-center">
         <div class="col-lg-6">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/nb1.jpeg" alt="">
+            <img class="img-fluid" src="images/nb1.jpeg" alt="">
           </div>
         </div>
         <div class="col-lg-6">
@@ -150,7 +156,7 @@ session_start();
       <div class="row align-items-center">
         <div class="col-lg-6 order-lg-2">
           <div class="p-5">
-            <img class="img-fluid rounded-circle" src="images/water.jpeg" alt="">
+            <img class="img-fluid" src="images/water.jpeg" alt="">
           </div>
         </div>
         <div class="col-lg-6 order-lg-1">
@@ -165,6 +171,26 @@ session_start();
 
   <!-- Footer -->
   <footer class="py-5 bg-black">
+   <div class="d-flex justify-content-center">
+   <ul>
+   
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <a href="#" class="fa fa-google"></a>
+    <a href="#" class="fa fa-linkedin"></a>
+    <a href="#" class="fa fa-youtube"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-pinterest"></a>
+    <a href="#" class="fa fa-snapchat-ghost"></a>
+    <a href="#" class="fa fa-skype"></a>
+    <a href="#" class="fa fa-android"></a>
+    <a href="#" class="fa fa-flickr"></a>
+    <a href="#" class="fa fa-yahoo"></a>
+    <a href="#" class="fa fa-reddit"></a>
+    <a href="#" class="fa fa-rss"></a>
+   
+   </ul>
+   </div>
     <div class="container">
       <p class="m-0 text-center text-white small">Copyright &copy; www.noticeboardsystem.com 2019    <span style="width:5px;">  </span>The Team: Shaban Masaka Mgini</p>
     </div>

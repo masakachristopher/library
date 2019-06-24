@@ -19,7 +19,7 @@ else
 ?>
 <h2 style="color:#00FFCC">All Notice</h2>
 
-<table class="table table-bordered">
+<table class="table">
 	<tr>
 		<th colspan="7"><a href="index.php?page=add_notice">Create or Add Notice</a></th>
 	</tr>
@@ -29,8 +29,8 @@ else
 		<th>Details</th>
 		<th>User</th>
 		<th>Date</th>
-		<th>Delete</th>
-		<th>Update</th>
+		<th>Remove Notice</th>
+		<th>Update Notice</th>
 	</Tr>
 		<?php 
 

@@ -73,7 +73,7 @@ header('location:login.php');
 			<!-- find users' image if image not found then show dummy image -->
 			
 			
-            <li><a href="#"><img src="../images/person.jpg" width="100" height="100" alt="not found"/></a></li>
+            <li><a href="#"><img src="../images/adminpic.png" width="100" height="100" alt="not found"/></a></li>
 			
 			
 			
@@ -133,35 +133,22 @@ header('location:login.php');
 		  
 		
 		  
-		  <h1 class="page-header">Dashboard</h1>
+		  <h5 class="page-header">  
+         <form class="align-contents-right" action="search.php" method="get">
+            <input type="text" placeholder="admin search" name="q">
+            <input type="submit" value="go">
+         </form>
+         
+        
+      </h5>
 		  
 		
-          <div class="row placeholders">
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="images/dlab.jpg" width="400px" height="400px" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>update no 1</h4>
-              <span class="text-muted">administration status</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="images/admin.jpeg" width="400px" height="400px" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>update no 2</h4>
-              <span class="text-muted">Towards the end of the semester we require everyone to pay and get fully registered in ARIS</span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>update no 3</h4>
-              <span class="text-muted"></span>
-            </div>
-            <div class="col-xs-6 col-sm-3 placeholder">
-              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="200" height="200" class="img-responsive" alt="Generic placeholder thumbnail">
-              <h4>update no 4</h4>
-              <span class="text-muted"></span>
-            </div>
-          </div>
+          
+            
 		  
 		  <?php } ?>
 		  
-
+          
          
         </div>
       </div>
@@ -174,7 +161,7 @@ header('location:login.php');
     <script>window.jQuery || document.write('<script src="../js/vendor/jquery.min.js"><\/script>')</script>
     <script src="../js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="../js/vendor/holder.min.js"></script>
+    <!-- <script src="../js/vendor/holder.min.js"></script> -->
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../js/ie10-viewport-bug-workaround.js"></script>
   </body>

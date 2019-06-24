@@ -19,7 +19,7 @@ else
 </script>
 <h2 style="color:#00FFCC">All Users</h2>
 
-<table class="table table-bordered">
+<table class="table table-striped">
 	<Tr class="success">
 		<th>Sr.No</th>
 		<th>User Name</th>

@@ -30,10 +30,6 @@ $res=mysqli_fetch_array($q);
 	</div>
 	
 	
-	<div class="row" style="margin-top:10px">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-	</div>	
 	
 	<div class="row">
 		<div class="col-sm-4">Details</div>
@@ -42,10 +38,7 @@ $res=mysqli_fetch_array($q);
 	</div>
 	
 	
-	<div class="row" style="margin-top:10px">
-		<div class="col-sm-2"></div>
-		<div class="col-sm-8">
-	</div>	
+	
 	
 	<div class="row">
 		<div class="col-sm-4"> Select User</div>

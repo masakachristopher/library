@@ -1,5 +1,6 @@
 <?php 
 extract($_POST);
+// $image_post=$_POST["image_post"];
 if(isset($add))
 {
 
@@ -11,7 +12,7 @@ if(isset($add))
 	{
 		foreach($user as $v)
 		{
-mysqli_query($conn,"insert into notice values('','$v','$sub','$details',now())");
+mysqli_query($conn,"insert into notice values('','$v','$sub','$details','$_POST[image_post]',now())");
 		}
 		
 		$err="<font color='green'>Notice added Successfully</font>";	
@@ -36,8 +37,11 @@ mysqli_query($conn,"insert into notice values('','$v','$sub','$details',now())")
 		</div>
 	</div>
 	
-	<div height="5px">
-	
+
+	<div class="" style="margin-top:15px">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+	</div>	
 	
 	<div class="row">
 		<div class="col-sm-4">Enter Details</div>
@@ -45,26 +49,35 @@ mysqli_query($conn,"insert into notice values('','$v','$sub','$details',now())")
 		<textarea name="details" class="form-control"></textarea>
 		</div>
 	</div>
-	
-	
-	<div >
-	
+
+	<div class="" style="margin-top:10px">
+		<div class="col-sm-2"></div>
+		<div class="col-sm-8">
+	</div>	
+
 	<div class="row">
-		<div class="col-sm-4">Select User</div>
+		<div class="col-sm-4">Poster upload</div>
 		<div class="col-sm-5">
-		<select name="user[]" multiple="multiple" class="form-control">
-			<?php 
-	$sql=mysqli_query($conn,"select name,email from user");
-	while($r=mysqli_fetch_array($sql))
-	{
-		echo "<option value='".$r['email']."'>".$r['name']."</option>";
-	}
-			?>
-		</select>
-		</div>
+		<input type="file" name="image_post">
+    	<img id="blah"  src="" alt="">
 	</div>
 	
-	<div class="row" style="margin-top:10px">
+	<div class="">
+		<div class="col-sm-4">Select User</div>
+		    <div class="col-sm-5">
+			 <select name="user[]" multiple="multiple" class="form-control">
+				<?php 
+				$sql=mysqli_query($conn,"select name,email from user");
+				while($r=mysqli_fetch_array($sql))
+				{
+				echo "<option value='".$r['email']."'>".$r['name']."</option>";
+				}
+				?>
+		     </select>
+	         </div>
+	     </div>
+	
+	<div class="" style="margin-top:15px">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
 	</div>	

@@ -21,7 +21,7 @@ $res=mysqli_fetch_array($q);
 		<div class="col-sm-4"><?php echo @$err;?></div>
 	</div>
 	
-	
+	<br>
 	
 	<div class="row">
 		<div class="col-sm-4"> Notice Subject</div>
@@ -29,15 +29,15 @@ $res=mysqli_fetch_array($q);
 		<input type="text" name="sub" value="<?php echo $res['subject']; ?>" class="form-control"/></div>
 	</div>
 	
-	
-	
+	<br>
+
 	<div class="row">
 		<div class="col-sm-4">Details</div>
 		<div class="col-sm-5">
 		<textarea name="details" class="form-control"><?php echo $res['Description']; ?></textarea></div>
 	</div>
 	
-	
+	<br>
 	
 	
 	<div class="row">

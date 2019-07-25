@@ -30,7 +30,7 @@ $res=mysqli_fetch_assoc($sql);
 <h2 align="center"><b>Profile Update</b></h2>
 
 		<form style="" method="post">
-			<table class="table table-striped">
+			<table class="table table">
 	
 		<?php echo @$err;?>
 	
@@ -71,15 +71,18 @@ $res=mysqli_fetch_assoc($sql);
 					$arrr1=explode("-",$res['dob']);
 					?>
 					<Td>
-					<select class="form-control" style="width:100px;float:left" name="yy">
-					<option value="">Year</option>
+					
+					<select class="form-control" style="width:100px;float:left" name="dd">
+					<option value="">Date</option>
 					<?php 
-					for($i=1950;$i<=2019;$i++)
+					for($i=1;$i<=31;$i++)
 					{
 					?>
-					<option <?php if($arrr1[0]==$i){echo "selected";} ?>><?php echo $i; ?></option>
+					<option <?php if($arrr1[2]==$i){echo "selected";} ?>><?php echo $i; ?></option>
 					<?php }					
 					?>
+					<!-- }					
+					?> -->
 					
 					</select>
 					
@@ -92,25 +95,24 @@ $res=mysqli_fetch_assoc($sql);
 					<option <?php if($arrr1[1]==$i){echo "selected";} ?>><?php echo $i; ?></option>
 					<?php }					
 					?>
-					}					
-					?>
+					<!-- }					
+					?> -->
 					
 					</select>
 					
- 					
-					<select class="form-control" style="width:100px;float:left" name="dd">
-					<option value="">Date</option>
+					<select class="form-control" style="width:100px;float:left" name="yy">
+					<option value="">Year</option>
 					<?php 
-					for($i=1;$i<=31;$i++)
+					for($i=1950;$i<=2019;$i++)
 					{
 					?>
-					<option <?php if($arrr1[2]==$i){echo "selected";} ?>><?php echo $i; ?></option>
+					<option <?php if($arrr1[0]==$i){echo "selected";} ?>><?php echo $i; ?></option>
 					<?php }					
-					?>
-					}					
 					?>
 					
 					</select>
+ 					
+					
 					
 					</td>
 				</tr>

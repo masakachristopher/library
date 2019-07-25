@@ -25,7 +25,7 @@ $res=mysqli_fetch_assoc($sql);
 <h2 align="center">Update your image</h2>
 
 		<form method="post" enctype="multipart/form-data">
-			<table class="table table-striped ">
+			<table class="table table ">
 	<Tr>
 		<Td colspan="2"><?php echo @$err;?></Td>
 	</Tr>

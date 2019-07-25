@@ -40,7 +40,7 @@ $users=mysqli_fetch_assoc($sql);
     <!-- <![endif] -->
   </head>
 
-  <body>
+  <body style="background:silver">
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
       <div class="container-fluid">
@@ -58,9 +58,9 @@ $users=mysqli_fetch_assoc($sql);
            
             <li><a href="logout.php">Logout</a></li>
           </ul>
-          <!--<form class="navbar-form navbar-right">
-            <input type="text" class="form-control" placeholder="Search...">
-          </form>-->
+          <form class="navbar-form navbar-right" action="usersearch.php" method="get">
+            <input type="text" name="u" class="form-control" placeholder="Search...">
+          </form>
         </div>
       </div>
     </nav>
@@ -98,8 +98,11 @@ $users=mysqli_fetch_assoc($sql);
             
           </ul>
          
+              
+                    
          
         </div>
+        
         
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <!-- container-->
@@ -108,32 +111,35 @@ $users=mysqli_fetch_assoc($sql);
 		  if($page!="")
 		  {
 		  	if($page=="update_password")
-			{
+			  {
 				include('update_password.php');
 			
-			}
-			if($page=="notification")
-			{
+			  }
+			  if($page=="notification")
+			  {
 				include('notification.php');
 			
-			}
-			if($page=="update_profile")
-			{
+			  }
+			  if($page=="update_profile")
+			  {
 				include('update_profile.php');
 			
-			}
-			if($page=="update_profile_pic")
-			{
+			  }
+			  if($page=="update_profile_pic")
+			  {
 				include('update_profile_pic.php');
 			
-			}
+        } 
+        if($page=="usersearch")
+        {
+          include('usersearch.php');
+        }
 		  }
 		  else
 		  {
         
-        // include('notification.php');
-        // include('simple-magazine/index.html');
-        include('newsfeed/index.php');
+        include('notification.php');
+        
         
         
         

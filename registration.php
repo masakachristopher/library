@@ -28,7 +28,7 @@ $imageName=$_FILES['img']['name'];
 $pass=md5($p);
 
 
-$query="insert into user values('','$n','$e','$pass','$mob','$gen','$_POST[yos]','$imageName','$dob','$_POST[regid]')";
+$query="insert into user values('','$n','$e','$pass','$mob','$gen','$yos','$imageName','$dob','$regid')";
 mysqli_query($conn,$query);
 
 //upload image
@@ -45,52 +45,97 @@ $err="<font color='blue'>Registration successfull !!</font>";
 ?>
 
  
-  <h2>Register Here</h2>
-		<form width="50px" method="post" enctype="multipart/form-data">
+  <h3 style="color:silver">REGISTER HERE</h3>
+		<form method="post" enctype="multipart/form-data">
 		
 			<p><?php echo @$err;?></p>
 						
-						
-					 Enter your name: <br>
-					<input type="text"  class="form-control" name="n" required>
-					<br>
-				
-					 Enter your email: <br>
-					<input type="email"  class="form-control" name="e" required>
-			
-					<br>
-			
-					Enter your password: <br>
-					<input type="password" class="form-control" name="p" required>
-				
-					<br>
-					Enter your mobile: <br>
-					<input  class="form-control" type="tel" value="+255" name="mob" required>
-				
-				
-					<br>
-					Select your gender:
-					Male<input type="radio" name="gen" value="m" required>
-					Female<input type="radio" name="gen" value="f">	
-					<br>
+					<div class="row">	
+					<div class="col-sm-4">Enter your name:</div>  
+					<div class="col-sm-5">
+					<input type="text" placeholder="your name" class="form-control" name="n" required></div>
+					
+					</div>
 
 					<br>
-					Year of study:
-					<input type="number" min="1" max="5" value="1" name="yos">
+
+					<div class="row">
+					<div class="col-sm-4">Enter your email: </div>
+					<div class="col-sm-5">
+					<input type="email" placeholder="your email" class="form-control" name="e" required></div>
+					</div>
+
 					<br>
+
+					<div class="row">
+					<div class="col-sm-4">Enter your password: </div>
+					<div class="col-sm-5">
+					<input type="password" placeholder="your password" class="form-control" name="p" required></div>
+					</div>
+
 					<br>
-					Registration number:
-					<input type="" name="regid" value="0000-00-00000">
-					<br>
-					<br>
-								
-					Upload  your Image:
-					<input class="" type="file" name="img" required>
-					<br>
-					<br>
-					Enter your Date of Birth:
+
+					<div class="row">
+					<div class="col-sm-4">Enter your mobile: </div>
+					<div class="col-sm-5">
 					
-					<select name="dd" required>
+					<input  class="form-control" type="tel" placeholder="+255" name="mob" required></div>
+					</div>
+				
+					<br>
+
+					<div class="row">
+					<div class="col-sm-4">Select your gender:</div>
+					<div class="col-sm-2">
+					
+					<input  type="radio" name="gen" value="m" required>Male</div>
+					<div class="col-sm-2">
+					
+					<input type="radio" name="gen" value="f">Female	</div>
+					</div>
+					
+
+					<br>
+
+					<div class="row">
+					<div class="col-sm-4">Year of study: </div>
+					<div class="col-sm-2">
+					
+					<select type="number" class="form-control" name="yos" required>
+					<option value="">your year of study</option>	
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					</select></div>
+					</div>
+					<br>
+	
+					<div class="row">
+					<div class="col-sm-4">Registration number:</div>
+					<div class="col-sm-2">
+					
+					<input type="" name="regid" class="form-control" placeholder="0000-00-00000" required>
+					<br>
+					</div>
+					</div>
+
+					<div class="row">
+					<div class="col-sm-4">Upload  your Image:</div>
+					<div class="col-sm-4">		
+					<!-- Upload  your Image: -->
+					<input class="form-control" type="file" name="img" required>
+					<br>
+					</div>
+					</div>
+
+					<div class="row">
+					<div class="col-sm-4">Enter your Date of Birth:</div>
+					<div class="col-sm-1">
+					
+					
+					<select class="form-control" name="dd" required>
 					<option value="">Day</option>
 					<?php 
 					for($i=1;$i<=31;$i++)
@@ -99,9 +144,9 @@ $err="<font color='blue'>Registration successfull !!</font>";
 					}					
 					?>
 					
-					</select>
-					
-					<select name="mm" required>
+					</select></div>
+					<div class="col-sm-2">
+					<select class="form-control" name="mm" required>
 					<option value="">Month</option>
 					<?php 
 					for($i=1;$i<=12;$i++)
@@ -110,10 +155,10 @@ $err="<font color='blue'>Registration successfull !!</font>";
 					}					
 					?>
 					
-					</select>
+					</select></div>
 					
- 					
-					<select name="yy" required>
+ 					<div class="col-sm-1">
+					<select class="form-control" name="yy" required>
 					<option value="">Year</option>
 					<?php 
 					for($i=2019;$i>=1950;$i--)
@@ -121,10 +166,11 @@ $err="<font color='blue'>Registration successfull !!</font>";
 					echo "<option>".$i."</option>";
 					}
 					?>    					
-					</select>
+					</select></div></div>
 					
-					<br>
-					<br>
+				
+					<br></div>
+					</div>
 					
                    <input type="submit" class="btn btn-success" value="Save" name="save"/>
                    <input type="reset" class="btn btn-danger" value="Reset"/>

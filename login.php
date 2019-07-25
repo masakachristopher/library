@@ -31,7 +31,7 @@ $err="<font color='red'>Invalid login details</font>";
 }
 
 ?>
-<h2>Login Here</h2>
+<h3 style="color:silver">LOGIN HERE</h3>
 <form method="post">
 	
 	<div class="row">
@@ -43,16 +43,17 @@ $err="<font color='red'>Invalid login details</font>";
 	
 	<div class="row">
 		<div class="col-sm-4">Enter your email</div>
-		<div class="col-sm-8">
-		<input type="email" name="e" class="form-control"/></div>
+		<div class="col-sm-5">
+		<input type="email" name="e" placeholder="your email" class="form-control"/></div>
 	</div>
 	<br>
 	<div class="row">
 		<div class="col-sm-4">Enter your password</div>
-		<div class="col-sm-8">
-		<input type="password" name="p" class="form-control"/></div>
+		<div class="col-sm-5">
+		<input type="password" name="p" placeholder="your password" class="form-control"/></div>
 	</div>
 	<br>
+	
 	<div class="row" style="margin-top:10px">
 		<div class="col-sm-2"></div>
 		<div class="col-sm-8">
@@ -60,4 +61,6 @@ $err="<font color='red'>Invalid login details</font>";
 		
 		</div>
 	</div>
+	
 </form>	
+

@@ -14,6 +14,8 @@ session_start();
 
   <title>Notice Board Online Platform</title>
 
+  
+
   <!-- Bootstrap core CSS -->
   <link href="wonder/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -30,29 +32,30 @@ session_start();
 
 </head>
 
-<body style="background-color:black;">
+<body >
 <div>
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="indexpage.php"><span class="glyphicon glyphicon-home"></span>Home</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <ul class="navbar-nav ml-auto text-left">
+        <li class="nav-item">
+       <a class="nav-link" href="indexpage.php">Home</a>
+        </li>
+        </ul>
       
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
+        <ul class="navbar-nav ml-auto text-right">
           <li class="nav-item">
-            <a class="nav-link" href="indexpage.php?option=about"><span class="glyphicon glyphicon-user"></span> About</a>
+            <a class="nav-link" href="indexpage.php?option=about">About</a>
           </li>
 	        <li class="nav-item">
-            <a class="nav-link" href="indexpage.php?option=contact"><span class="glyphicon glyphicon-phone"></span>Contact</a>
+            <a class="nav-link" href="indexpage.php?option=contact">Admin</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="indexpage.php?option=New_user"><span class="glyphicon glyphicon-user"></span>Sign Up</a>
+          <a class="nav-link" href="indexpage.php?option=New_user">Student sign up</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="indexpage.php?option=login"><span class="glyphicon glyphicon-login"></span>Log In</a>
+            <a class="nav-link" href="indexpage.php?option=login">Student sign in</a>
           </li>
           
         </ul>
@@ -63,24 +66,12 @@ session_start();
  </div>
  
 
-  <header class="masthead text-center text-white">
+  <header style="background-image:url('images/hall.jpg');height:100%;width:100%;" class="masthead text-center text-white">
     <div class="masthead-content">
-
-      <div class="container">
-        <h1 class="masthead-heading mb-0">welcome to this notice board platform</h1>
-        <h2 class="masthead-subheading mb-0">home of every update you need</h2>
-        <a href="indexpage.php?option=login" class="btn btn-primary btn-xl rounded-pill mt-5">Get More</a>
-      </div>
-    </div>
-    <div class="bg-circle-1 bg-circle"></div>
-    <div class="bg-circle-2 bg-circle"></div>
-    <div class="bg-circle-3 bg-circle"></div>
-    <div class="bg-circle-4 bg-circle"></div>
-  </header>
-  
-  <section style="background-color:silver;">
-    <div  class="col-sm-4">
-<div   class="panel-body">
+    <h1 style="font-size:60px;color:black;">Online Notice Board Platform</h1>
+    <div class="responsive">
+    <div  class="d-flex justify-content-center">
+<div   class="panel-body" style="width:70%;">
 	<?php 
 		@$opt=$_GET['option'];
 		
@@ -88,11 +79,12 @@ session_start();
 		{
 			if($opt=="about")
 			{
-			include('about.php');
+      include('about.php');
+      
 			}
 			else if($opt=="contact")
 			{
-			include('contact.php');
+			header("Location: admin/login.php");
 			}
 			
 			else if($opt=="New_user")
@@ -112,94 +104,39 @@ session_start();
 	</div>
   </div>
   </section>
-  <section>
+  
+    <h2 style="color:yellow;" class="desc">communicate !! Get Informed !! advertisement and inspiration !!</h2>
 
-
+      </div>
+     </div>
+  </header>
+  
+  
+ 
+  <!-- footer -->
+  <footer style="margin-top:;" class="py-5 bg-black">
+   <div style="margin-top:-2%">
+   <ul class="text-center">
    
-    <div style="background-color:silver;" class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid" src="images/vote.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h2 class="display-4">Are you ready for the election??!! </h2>
-            <p>It will be held after few weeks.Who is going to be our president?</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section style="background-clolor:;">
-    <div style="background-color:brown;"  class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6">
-          <div class="p-5">
-            <img class="img-fluid" src="images/nb1.jpeg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="p-5">
-            <h2 class="display-4">It is time</h2>
-            <p>Names for all students who require loan money</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section>
-    <div style="background-color:blueviolet;"  class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 order-lg-2">
-          <div class="p-5">
-            <img class="img-fluid" src="images/water.jpeg" alt="">
-          </div>
-        </div>
-        <div class="col-lg-6 order-lg-1">
-          <div class="p-5">
-            <h2 class="display-4">Water problem in the hostels</h2>
-            <p>Dawasco explained to the Waden about water shortage for these late months</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="py-5 bg-black">
-   <div class="d-flex justify-content-center">
-   <ul>
-   
-    <a href="#" class="fa fa-facebook"></a>
-    <a href="#" class="fa fa-twitter"></a>
-    <a href="#" class="fa fa-google"></a>
-    <a href="#" class="fa fa-linkedin"></a>
-    <a href="#" class="fa fa-youtube"></a>
-    <a href="#" class="fa fa-instagram"></a>
-    <a href="#" class="fa fa-pinterest"></a>
-    <a href="#" class="fa fa-snapchat-ghost"></a>
-    <a href="#" class="fa fa-skype"></a>
-    <a href="#" class="fa fa-android"></a>
-    <a href="#" class="fa fa-flickr"></a>
-    <a href="#" class="fa fa-yahoo"></a>
-    <a href="#" class="fa fa-reddit"></a>
-    <a href="#" class="fa fa-rss"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-facebook"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-twitter"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-whatsapp"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-instagram"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-google"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-youtube"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-yahoo"></a>
+    <a href="#" style="transform:scale(1.25)" class="fa fa-wechat"></a>
+    
    
    </ul>
    </div>
-    <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; www.noticeboardsystem.com 2019    <span style="width:5px;">  </span>The Team: Shaban Masaka Mgini</p>
+    <div style="margin-bottom:-2%" class="container">
+      <p class="m-0 text-center text-white large">Copyright &copy; www.noticeboardsystem.com 2019  - Mwaulanga.  Masaka.  Mgini</p>
     </div>
-    <!-- /.container -->
-  </footer>
+  
+  </footer> 
 
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  
 
 </body>
 

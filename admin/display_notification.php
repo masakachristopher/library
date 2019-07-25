@@ -29,8 +29,8 @@ else
 		<th>Details</th>
 		<th>User</th>
 		<th>Date</th>
-		<th>Remove Notice</th>
-		<th>Update Notice</th>
+		<th>Remove post</th>
+		<th>Update post</th>
 	</Tr>
 		<?php 
 
